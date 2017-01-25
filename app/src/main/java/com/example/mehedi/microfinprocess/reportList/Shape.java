@@ -23,7 +23,7 @@ public class Shape {
         oval.setShaderFactory(new ShapeDrawable.ShaderFactory() {
             @Override
             public Shader resize(int width, int height) {
-                return new RadialGradient(width/2, height/2, width-20, color_center, color_shade, Shader.TileMode.MIRROR);
+                return new RadialGradient(width/2, height/2, width-10, color_center, color_shade, Shader.TileMode.MIRROR);
             }
         });
 
