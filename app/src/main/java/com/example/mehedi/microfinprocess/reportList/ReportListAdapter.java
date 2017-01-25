@@ -68,8 +68,9 @@ public class ReportListAdapter extends RecyclerView.Adapter<ReportListAdapter.Re
 
             report_no.setText(reportData.getReport_no());
             report_name.setText(reportData.getReport_name());
-            String color_code = reportData.getColor_code();
-            report_no.setBackgroundDrawable(drawCircle (context, 50, 50, Color.parseColor(color_code)));
+            String color_code_center = reportData.getColor_code_center();
+            String color_code_shade = reportData.getColor_code_sahde();
+            report_no.setBackgroundDrawable(drawCircle (context, 50, 50, Color.parseColor(color_code_center), Color.parseColor(color_code_shade)));
 
         }
     }

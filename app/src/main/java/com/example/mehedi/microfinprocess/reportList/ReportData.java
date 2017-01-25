@@ -6,22 +6,33 @@ package com.example.mehedi.microfinprocess.reportList;
 
 public class ReportData {
 
-    String color_code;
+    String color_code_center;
+    String color_code_sahde;
     String report_no;
     String report_name;
 
-    public ReportData(String color_code, String report_no, String report_name) {
-        this.color_code = color_code;
+    public ReportData(String color_code__center, String color_code_sahde, String report_no, String report_name) {
+        this.color_code_center = color_code__center;
+        this.color_code_sahde = color_code_sahde;
         this.report_no = report_no;
         this.report_name = report_name;
     }
 
-    public String getColor_code() {
-        return color_code;
+    public String getColor_code_center() {
+        return color_code_center;
     }
 
-    public void setColor_code(String color_code) {
-        this.color_code = color_code;
+    public void setColor_code_center(String color_code) {
+        this.color_code_center = color_code;
+    }
+
+
+    public String getColor_code_sahde() {
+        return color_code_sahde;
+    }
+
+    public void setColor_code_sahde(String color_code_sahde) {
+        this.color_code_sahde = color_code_sahde;
     }
 
     public String getReport_no() {

@@ -60,9 +60,9 @@ public class MainActivity extends AppCompatActivity {
         report_no.setBackgroundDrawable (drawCircle (MainActivity.this, 50, 50, Color.parseColor("#ffFEBB31")));
         report_no.setText ("20");*/
 
-        ReportData reportData1 = new ReportData("#035342","1","First Report");
-        ReportData reportData2 = new ReportData("#FF4081", "2", "Second Report");
-        ReportData reportData3 =new ReportData("#FF0062", "3", "Third Report");
+        ReportData reportData1 = new ReportData("#4A148C","#6A1B9A","1","First Report");
+        ReportData reportData2 = new ReportData("#880E4F","#AD1457", "2", "Second Report");
+        ReportData reportData3 =new ReportData("#0D47A1", "#1565C0", "3", "Third Report");
 
         reportDataList.add(reportData1);
         reportDataList.add(reportData2);
