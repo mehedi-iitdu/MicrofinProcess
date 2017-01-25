@@ -1,15 +1,15 @@
-package com.example.mehedi.microfinprocess;
+package com.example.mehedi.microfinprocess.processCard;
 
 /**
  * Created by mehedi on 1/23/17.
  */
 
-public class CardList {
+public class CardData {
 
     private String process_name;
     private int process_image;
 
-    public CardList(int process_image, String process_name){
+    public CardData(int process_image, String process_name){
         this.process_name = process_name;
         this.process_image = process_image;
     }

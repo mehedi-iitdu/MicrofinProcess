@@ -1,13 +1,15 @@
-package com.example.mehedi.microfinprocess;
+package com.example.mehedi.microfinprocess.processCard;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.mehedi.microfinprocess.Listener;
+import com.example.mehedi.microfinprocess.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,13 +21,13 @@ import java.util.List;
 public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder>{
 
     Context context;
-    List<CardList> cardLists = new ArrayList<>();
+    List<CardData> cardDatas = new ArrayList<>();
     LayoutInflater inflater;
     Listener listener;
 
-    public CardAdapter(Context context, List <CardList> cardLists){
+    public CardAdapter(Context context, List <CardData> cardDatas){
         this.context = context;
-        this.cardLists = cardLists;
+        this.cardDatas = cardDatas;
         this.listener = (Listener) listener;
         this.inflater = LayoutInflater.from(context);
 
@@ -41,13 +43,13 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
 
     @Override
     public void onBindViewHolder(CardViewHolder holder, int position) {
-        holder.bind(cardLists.get(position),listener);
+        holder.bind(cardDatas.get(position),listener);
     }
 
     @Override
     public int getItemCount() {
 
-        return cardLists.size();
+        return cardDatas.size();
     }
 
     public class CardViewHolder extends RecyclerView.ViewHolder{
@@ -62,10 +64,10 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
             tv_process_name = (TextView) itemView.findViewById(R.id.process_name);
         }
 
-        public void bind(final CardList cardList, final Listener listener){
+        public void bind(final CardData cardData, final Listener listener){
 
-            iv_process_image.setImageResource(cardList.getProcess_image());
-            tv_process_name.setText(cardList.getProcess_name());
+            iv_process_image.setImageResource(cardData.getProcess_image());
+            tv_process_name.setText(cardData.getProcess_name());
         }
     }
 }
