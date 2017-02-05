@@ -1,7 +1,6 @@
 package com.example.mehedi.microfinprocess.reportList;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.graphics.RadialGradient;
 import android.graphics.Shader;
 import android.graphics.drawable.Drawable;
@@ -20,6 +19,7 @@ public class Shape {
 
         oval.setIntrinsicHeight (height);
         oval.setIntrinsicWidth (width);
+        oval.getPaint().setColor(color_center);
         oval.setShaderFactory(new ShapeDrawable.ShaderFactory() {
             @Override
             public Shader resize(int width, int height) {
